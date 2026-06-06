@@ -1,0 +1,29 @@
+zad1
+
+1. Czym jest props.children?
+To automatyczny prop w React, który zawiera wszystko, co włożysz pomiędzy znacznik otwierający i zamykający komponentu (jak w HTML).
+
+2. Dlaczego nie można zmienić nazwy "children"?
+Ponieważ children to nazwa zastrzeżona w składni JSX. Pod spodem React automatycznie mapuje wnętrze komponentu na obiekt props.children. Własna nazwa (np. props.moje) nie zadziała przy standardowym zapisie <Komponent>...</Komponent>.
+
+3. 3 rzeczy, które można przekazać jako children:
+Tekst (String) – np. <Button>Kliknij</Button>
+
+Elementy HTML / Inne komponenty – np. <Card><p>Tekst</p><Icon /></Card>
+
+Funkcje (Render Props) – np. <Wrapper>{(data) => <div>{data}</div>}</Wrapper>
+
+zad2
+
+1. Co zostanie wyrenderowane?
+Zostaną wyrenderowane dwa bloki (panele) o strukturze: nagłówek <h3> z tytułem oraz sekcja body zawierająca przekazaną treść.
+
+2. Jakie klasy CSS będą miały elementy div.panel?
+Pierwszy panel ("Statystyki"): panel panel–accent (ponieważ accent={true}).
+
+Drugi panel ("Powiadomienia"): panel  (z dodatkową spacją na końcu, ponieważ accent domyślnie jest false).
+
+3. Co jest children w każdym przypadku?
+W pierwszym przypadku: Tablica dwóch elementów akapitu: [<p>Użytkownicy...</p>, <p>Zamówienia...</p>].
+
+W drugim przypadku: Jeden element typu span: <span>Brak nowych powiadomień</span>.
